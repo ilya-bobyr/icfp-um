@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\test\context.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\memoryManager.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\array.cpp" />
+    <ClCompile Include="..\context.cpp" />
+    <ClCompile Include="..\jumpTable.cpp" />
+    <ClCompile Include="..\memoryManager.cpp" />
+    <ClCompile Include="..\nativeCode.cpp" />
+    <ClCompile Include="..\platter.cpp" />
+    <ClCompile Include="..\utils.cpp" />
+    <ClCompile Include="..\exceptions\systemError.cpp">
+      <Filter>exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\main.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\array.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\platter.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scrollReader.cpp" />
+    <ClCompile Include="..\test\scrollReader.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="test">
+      <UniqueIdentifier>{f1aa08ef-27d5-403d-b3b9-ea33d643b7fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="exceptions">
+      <UniqueIdentifier>{45240718-41a5-46d3-a202-c05302d8795a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\test\context.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\memoryManager.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\array.h" />
+    <ClInclude Include="..\context.h" />
+    <ClInclude Include="..\jumpTable.h" />
+    <ClInclude Include="..\memoryManager.h" />
+    <ClInclude Include="..\nativeCode.h" />
+    <ClInclude Include="..\platter.h" />
+    <ClInclude Include="..\scrollReader.h" />
+    <ClInclude Include="..\utils.h" />
+    <ClInclude Include="..\windows.h" />
+    <ClInclude Include="..\exceptions\base.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\exceptions\invalidArrayIndex.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\exceptions\invalidOperatorFormat.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\exceptions\systemError.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\array.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\platter.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\scrollReader.h">
+      <Filter>test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.platter.cpp.swp" />
+  </ItemGroup>
+</Project>

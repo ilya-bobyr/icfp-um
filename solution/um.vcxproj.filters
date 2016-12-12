@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\array.cpp" />
+    <ClCompile Include="..\context.cpp" />
+    <ClCompile Include="..\jumpTable.cpp" />
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\memoryManager.cpp" />
+    <ClCompile Include="..\nativeCode.cpp" />
+    <ClCompile Include="..\platter.cpp" />
+    <ClCompile Include="..\utils.cpp" />
+    <ClCompile Include="..\exceptions\systemError.cpp">
+      <Filter>exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\scrollReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\array.h" />
+    <ClInclude Include="..\context.h" />
+    <ClInclude Include="..\jumpTable.h" />
+    <ClInclude Include="..\memoryManager.h" />
+    <ClInclude Include="..\nativeCode.h" />
+    <ClInclude Include="..\platter.h" />
+    <ClInclude Include="..\scrollReader.h" />
+    <ClInclude Include="..\utils.h" />
+    <ClInclude Include="..\windows.h" />
+    <ClInclude Include="..\exceptions\base.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\exceptions\invalidArrayIndex.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\exceptions\invalidOperatorFormat.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\exceptions\systemError.h">
+      <Filter>exceptions</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="exceptions">
+      <UniqueIdentifier>{a66faf05-a649-4d71-be7b-65374a5e8b8a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,64 @@
+TODO
+
+
+DONE
+
+ Version 1.2
+
+ - Move jumpTable pointer into nativeCode block
+
+ Version 1.1
+
+ - Store return address on the stack and use call instead of ret to return from
+   native code.
+   Currently native code for sandmark.umz is 226 083 bytes.  sandmark.umz itself
+   is 14 091 instructions (56 364 bytes).
+
+   * After this change sandmark.umz generated 173 009 bytes of native code.  77%
+     of the old size.
+
+     It also reduces sandmark runtime from 15 to 14 seconds.
+
+ Version 1.0
+
+ - Include _plattersOffset in the mov offset instead of having it as a separate
+   add for arrayIndex and arrayAmendment operations
+
+ - Append error reporting commands at the end of a generate native code block
+
+ - Update arrays pointer only when it may actually change
+
+ - Abandonment test
+
+ - Use macros to name UM instructions in the context tests
+
+
+WOULD NOT DO
+
+ - Improve generator performance by emitting whole block for an operation in one
+   EMIT_BYTES() call (this there will be only one memcpy) and then insert
+   necessary variables into "holes".
+
+   * sandmark.umz run time did not change (and it seemed like it even increased
+     by about 0.2s) but the code maintainability reduced.  Rolled back the
+     change.
+
+ - Clone array 0 only upon modification...  Conflicts with changes to the source
+   array %)
+
+   Maybe instead remember what array was loaded as array 0 and do two
+   comparisons on every array amendment: check for 0 and for that array index.
+   If either is modified only then clone source array and allow it to proceed as
+   it is doing now.
+
+   This will save on copying arrays when switching between them, if they
+   represent functions.
+
+   * Though I am not sure it has value... It depends on the compiler used to
+     generate operations.  If all the executable code is in one array there will
+     be no switches and this optimization will actually reduce performance a bit
+     as it will do additional checks on every assignment.  Plus all the
+     assignment operations will become a bit longer code wise.
+
+
+vim: set spell spl=en tw=80:

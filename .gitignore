@@ -1,0 +1,8 @@
+solution/*.user
+solution/*.sdf
+solution/Debug/
+solution/Release/
+solution/ipch/
+
+# Vim session files
+*.vim
