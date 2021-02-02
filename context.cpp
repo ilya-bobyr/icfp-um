@@ -487,7 +487,7 @@ size_t context::codeFor(const platter & p, char * to)
                                        /* mov [eax], imm32 (0x31C0B000) */
 
                        "\xC7\x40\x03\x07\x5A\xFF\xD2"
-                            /* mov [eax + disp8(3)], imm32 (0xD2FF5A07) */
+                            /* mov [eax + disp8(3)], imm32 (0x075AFFD2) */
 
             /*     jmp rel8 (0) */
                        "\xEB\x00");
